@@ -8,4 +8,15 @@ public interface ServiceLayer {
     public Department saveDepartments(Department department);
 
     public List<Department> fetchDepartment();
+
+    public Department  fetchDepartmentbyId(Long departmentID);
+
+    public void deleteDepartment();
+
+    public void deleteDepartmentbyId(Long departmentId);
+
+    public Department setDepartmentLayer(Long departmentId, Department dep);
+
+    public Department findBydepartmentName(String departmentName);
+
 }

@@ -7,4 +7,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RepositoryLayer extends JpaRepository<Department,Long> {
+    public Department findBydepartmentName(String departmentName);
+    public Department findBydepartmentNameIgnoreCase(String departmentName);
 }
