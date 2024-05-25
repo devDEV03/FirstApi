@@ -1,5 +1,6 @@
 package com.example.demo.SpringBoot1.service;
 
+import com.example.demo.SpringBoot1.Exceptions.DepartmentNotFound;
 import com.example.demo.SpringBoot1.entity.Department;
 
 import java.util.List;
@@ -9,7 +10,7 @@ public interface ServiceLayer {
 
     public List<Department> fetchDepartment();
 
-    public Department  fetchDepartmentbyId(Long departmentID);
+    public Department  fetchDepartmentbyId(Long departmentID) throws DepartmentNotFound;
 
     public void deleteDepartment();
 

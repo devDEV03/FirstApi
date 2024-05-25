@@ -26,5 +26,48 @@ public class Department {
     public String departmentName;
     public String departmentType;
     public Integer employees;
+//
+//
+//    public Department() {
+//    }
+//
+//    public Department(Long departmentId, String departmentName, String departmentType, Integer employees) {
+//        this.departmentId = departmentId;
+//        this.departmentName = departmentName;
+//        this.departmentType = departmentType;
+//        this.employees = employees;
+//    }
+//
+//    public Long getDepartmentId() {
+//        return departmentId;
+//    }
+//
+//    public void setDepartmentId(Long departmentId) {
+//        this.departmentId = departmentId;
+//    }
+//
+//    public String getDepartmentName() {
+//        return departmentName;
+//    }
+//
+//    public void setDepartmentName(String departmentName) {
+//        this.departmentName = departmentName;
+//    }
+//
+//    public String getDepartmentType() {
+//        return departmentType;
+//    }
+//
+//    public void setDepartmentType(String departmentType) {
+//        this.departmentType = departmentType;
+//    }
+//
+//    public Integer getEmployees() {
+//        return employees;
+//    }
+//
+//    public void setEmployees(Integer employees) {
+//        this.employees = employees;
+//    }
 
 }

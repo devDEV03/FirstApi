@@ -1,6 +1,7 @@
 package com.example.demo.SpringBoot1.controller;
 
 
+import com.example.demo.SpringBoot1.Exceptions.DepartmentNotFound;
 import com.example.demo.SpringBoot1.entity.Department;
 import com.example.demo.SpringBoot1.service.ServiceLayer;
 import jakarta.validation.Valid;
@@ -31,7 +32,7 @@ public class DepartmentController {
     }
 
     @GetMapping("/departments/{id}")
-    public Department fetchDepartmentById(@PathVariable("id") Long departmentID){
+    public Department fetchDepartmentById(@PathVariable("id") Long departmentID) throws DepartmentNotFound {
         LOGGER.info("The fetch list Departments method has been intitated");
 
         return serviceLayer.fetchDepartmentbyId(departmentID);

@@ -1,6 +1,7 @@
 package com.example.demo.SpringBoot1.service;
 
 
+import com.example.demo.SpringBoot1.Exceptions.DepartmentNotFound;
 import com.example.demo.SpringBoot1.entity.Department;
 import com.example.demo.SpringBoot1.repository.RepositoryLayer;
 import org.jetbrains.annotations.NotNull;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 @Service
 public class ServiceLayerImp implements ServiceLayer{
@@ -27,7 +29,11 @@ public class ServiceLayerImp implements ServiceLayer{
     }
 
     @Override
-    public Department fetchDepartmentbyId(Long departmentID) {
+    public Department fetchDepartmentbyId(Long departmentID) throws DepartmentNotFound {
+        Optional<Department> department = repositoryLayer.findById(departmentID);
+        if(!department.isPresent()){
+            throw new DepartmentNotFound("Department is not found");
+        }
         return repositoryLayer.findById(departmentID).get();
     }
 
