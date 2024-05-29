@@ -12,6 +12,6 @@ public class HelloController {
 
     @RequestMapping(value = "/" ,method = RequestMethod.GET)
     public String helloWorld(){
-        return "Hello world aaaaaa";
+        return "Hello,Welcome to my First REST API";
     }
 }

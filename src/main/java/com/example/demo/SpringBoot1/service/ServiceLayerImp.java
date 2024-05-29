@@ -62,7 +62,7 @@ public class ServiceLayerImp implements ServiceLayer{
 
     @Override
     public Department findBydepartmentName(String departmentName) {
-        return repositoryLayer.findBydepartmentNameIgnoreCase(departmentName);
+        return repositoryLayer.findBydepartmentName(departmentName);
     }
 
 }
